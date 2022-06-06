@@ -1,0 +1,42 @@
+.image-container {
+    text-align: center;
+
+}
+
+.fixed-image {
+    max-width: 100% !important;
+}
+
+.chip-container {
+    width: 100%;
+    padding: 0 1.5%;
+    margin: 2% 0;
+    height: 2vw;
+}
+
+.chip {
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border: rgba(0,139,139, 0.5);
+    border-style: solid;
+    float: left;
+    color: rgba(0,139,139, 0.5);
+    margin-right: 15px;
+}
+
+.favourite-container {
+    float: right;
+    height: 1vw;
+
+    .favourite-icon {
+        color: 	#ffbf00;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .no-favourite-icon {
+        color: #ffbf00;
+        font-size: 40px;
+        cursor: pointer;
+    }
+}
