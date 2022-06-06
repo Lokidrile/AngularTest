@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{modalData.title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="favourite-container">
+        <span *ngIf="modalData.isFavourite" class="material-icons favourite-icon" (click)="modalData.isFavourite = !modalData.isFavourite" title="Remove from favourites">
+            star
+        </span>
+        <span *ngIf="!modalData.isFavourite" class="material-icons no-favourite-icon" title="Add to favourites" (click)="modalData.isFavourite = !modalData.isFavourite">
+            star_border
+        </span>
+    </div>
+    <div class="image-container">
+        <img src="{{modalData.poster}}" class="fixed-image"/>
+    </div>
+    <div class="chip-container">
+        <div class="chip" *ngFor="let genre of modalData.genres" >{{genre}}</div>
+    </div>
+    <div>
+        <em [innerHTML]="modalData.summary"></em>
+    </div>
+    <div>
+        <a [href]="imbdLink" target="_blank"> Go to IMDB!</a>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
