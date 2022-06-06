@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +7,5 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  searchString$!: Observable<string>;
   title = 'TVShows';
-
-  setSearchString(event: string) {
-    this.searchString$ = new Observable(observer => {
-      observer.next(event);
-    });
-  }
 }

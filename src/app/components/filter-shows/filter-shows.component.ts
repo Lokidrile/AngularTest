@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { HelperTvshowsService } from 'src/shared/services/helper-tvshows.service';
 
 @Component({
   selector: 'app-filter-shows',
@@ -9,11 +10,13 @@ export class FilterShowsComponent {
 
   public searchString = '';
   
+  constructor(private helperTvshowsService: HelperTvshowsService) {}
+
   @Output()
   isSearching: EventEmitter<string> = new EventEmitter<string>();
 
   public onSearchingTitles(): void {
-    this.isSearching.emit(this.searchString);
+    this.helperTvshowsService.setSearchString(this.searchString);
   }
 
 
