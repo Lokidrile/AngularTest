@@ -71,6 +71,7 @@ export class TvShowsListComponent implements OnInit, OnDestroy {
         }
       })
     }
+    this.helperTvshowsService.saveFavourites(this.tvShows);
   }
 
   public ngOnDestroy(): void {
