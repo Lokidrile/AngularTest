@@ -8,6 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterShowsComponent } from './components/filter-shows/filter-shows.component';
 import { TvShowsListComponent } from './components/tv-shows-list/tv-shows-list.component';
 import { ShowDetailModalComponent } from './components/show-detail-modal/show-detail-modal.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ShowDetailModalComponent } from './components/show-detail-modal/show-de
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    EffectsModule,
+    StoreModule.forRoot({}),
   ],
   providers: [NgbModule],
   bootstrap: [AppComponent]
