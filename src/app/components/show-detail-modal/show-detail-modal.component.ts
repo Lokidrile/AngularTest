@@ -18,4 +18,8 @@ export class ShowDetailModalComponent implements OnInit {
     this.imbdLink = `https://www.imdb.com/title/${this.modalData.imbdLink.toLocaleLowerCase()}`;
   }
 
+  onSaveModal(): void {
+    this.activeModal.close(this.modalData);
+  }
+
 }

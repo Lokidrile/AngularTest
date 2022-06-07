@@ -20,10 +20,10 @@
     <div>
         <em [innerHTML]="modalData.summary"></em>
     </div>
-    <div>
+    <ng-container *ngIf="imbdLink">
         <a [href]="imbdLink" target="_blank"> Go to IMDB!</a>
-    </div>
+    </ng-container>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="onSaveModal()">Save</button>
   </div>

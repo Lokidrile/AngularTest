@@ -22,6 +22,7 @@ export interface Externals {
 }
 
 export interface ModalTvShow {
+    id: number;
     title: string;
     poster: string;
     summary: string;

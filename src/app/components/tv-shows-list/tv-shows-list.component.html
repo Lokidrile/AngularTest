@@ -8,13 +8,20 @@
     </thead>
     <tbody>
         <tr *ngFor="let tvShow of tvShows" (click)="openModal(tvShow )">
-            <td>rekt</td>
+            <td></td>
             <td>{{ tvShow.name }}</td>
-            <td>Otto</td>
+            <td>
+                <span *ngIf="tvShow.isFavourite" class="material-icons favourite-icon" (click)="tvShow.isFavourite = !tvShow.isFavourite" title="Remove from favourites">
+                    star
+                </span>
+                <span *ngIf="!tvShow.isFavourite" class="material-icons no-favourite-icon" title="Add to favourites" (click)="tvShow.isFavourite = !tvShow.isFavourite">
+                    star_border
+                </span>
+            </td>
         </tr>
     </tbody>
 </table>
 
 <ng-template #emptyState>
-    Theres no results :(
+    There's no results :(
 </ng-template>
